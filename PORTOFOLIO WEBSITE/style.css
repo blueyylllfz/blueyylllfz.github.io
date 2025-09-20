@@ -18,7 +18,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: black;
+    background-color: rgb(158, 28, 223);
     color: white;
 }
 
@@ -39,7 +39,7 @@ header{
 
 .logo{
     font-size: 3rem;
-    color: #b74b4b;
+    color: #3fa0f5;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -60,8 +60,8 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+    color: #fe62cd;
+    border-bottom: 3px solid #fe62cd;
 }
 
 @media(max-width:995px){
@@ -71,8 +71,8 @@ nav a.active{
         top: 0;
         right: 0;
         width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
+        border-left: 3px solid #fe62cd;
+        border-bottom: 3px solid #fe62cd;
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background-color: #161616;
