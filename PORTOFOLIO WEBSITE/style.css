@@ -23,18 +23,18 @@ body{
 }
 
 header{
-    margin-top: 20px;
+    margin-top: 30px;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 5;
+    left: 5;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: #ffffff;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 50;
 }
 
 .logo{
