@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2e8G01u9+mN1zL5W0w4xJ58461J6G7d4jA1F7o8y05jA5002z+9g+9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Feli</a>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Skills</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="home">
+        <div class="home-content">
+            <img src="Cewe pinky🌹.jpg" alt="Gambar Profil Kartun">
+        </div>
+            <h1>Hi, It's <span>Feli</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore
+            dolores esse. Odit similique doloribus tenetur doloremque, sunt
+            commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam
+            quaerat neque asperiores ea.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a> 
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+        <div class="home-img">
+            <img src="Cewe pinky🌹.jpg" alt="Gambar Profil Kartun">
+        </div>
+    </section>
+    
+    <script>
+        const typingTextElement = document.querySelector('.typing-text span');
+        const words = ["Web Developer", "UI/UX Designer", "Front-end Coder"]; 
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeWriter, 500);
+                return;
+            }
+
+            const typingSpeed = isDeleting ? 50 : 100;
+            setTimeout(typeWriter, typingSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typingTextElement) {
+                typeWriter();
+            }
+        });
+    </script>
+</body>
+</html>
