@@ -140,7 +140,7 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #add8e6;
+    box-shadow: 0 0 25px #add8e6;
     cursor: pointer;
     transition: 0.2s linear;
 }
